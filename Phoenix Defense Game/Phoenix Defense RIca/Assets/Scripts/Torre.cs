@@ -8,19 +8,26 @@ public class Torre : MonoBehaviour {
     private bool esta_viva; 
     private float distancia_umbral=2;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Animator controlador;
 =======
 >>>>>>> parent of 44b4b08... 1
+=======
+>>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
 
    
 
     void Start()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         controlador = this.GetComponent<Animator>();
 =======
 
 >>>>>>> parent of 44b4b08... 1
+=======
+
+>>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
     }
 	
     void Disparar()
@@ -28,7 +35,6 @@ public class Torre : MonoBehaviour {
         GameObject obj = (GameObject)Instantiate(GameObject.Find("Bala"), this.transform.position, Quaternion.identity);
         Bala bala = obj.GetComponent<Bala>();
         bala.ActivarBala(this);
-
     }
 	GameObject BuscarEnemigoCercano()
     {
@@ -51,6 +57,7 @@ public class Torre : MonoBehaviour {
         {
             Disparar();
 <<<<<<< HEAD
+<<<<<<< HEAD
             controlador.SetBool("atacar", true);
             Debug.DrawLine(this.transform.position, enemigo.transform.position, Color.yellow);
         }
@@ -62,6 +69,10 @@ public class Torre : MonoBehaviour {
             Debug.DrawLine(this.transform.position, enemigo.transform.position, Color.yellow);
         }
 >>>>>>> parent of 44b4b08... 1
+=======
+            Debug.DrawLine(this.transform.position, enemigo.transform.position, Color.yellow);
+        }
+>>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
 	}
     public GameObject Enemigo
     {

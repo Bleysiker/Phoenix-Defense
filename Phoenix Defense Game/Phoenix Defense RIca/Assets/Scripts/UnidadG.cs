@@ -8,6 +8,7 @@ public class UnidadG : MonoBehaviour {
     public GameObject ruta;
     private int indice;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Vector2 posicion_inicial;
     private Transform posicion_actual;
     private Transform posicion_siguiente;
@@ -23,12 +24,20 @@ public class UnidadG : MonoBehaviour {
     private float tiempo;
     private float distancia_punto = 0.6f;
 >>>>>>> parent of 44b4b08... 1
+=======
+    private Vector3 posicion_inicial;
+    private Vector3 posicion_siguiente;
+    public float vel = 0.5f;
+    private float tiempo;
+    private float distancia_punto = 0.6f;
+>>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
     private bool esta_viva;
 
     
 
     void Start()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         esta_viva = true;
         vel = .5f;
@@ -39,45 +48,35 @@ public class UnidadG : MonoBehaviour {
         posicion_inicial = this.transform.position;
         posicion_siguiente = ruta.transform.GetChild(0).position;
 >>>>>>> parent of 44b4b08... 1
+=======
+        posicion_inicial = this.transform.position;
+        posicion_siguiente = ruta.transform.GetChild(0).position;
+>>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
     }
     // Update is called once per frame
     void Update() {
 
         if (esta_viva==false)
         {
-            // Vector3 dir;
-            //dir = posicion_siguiente - this.transform.position;
-            //dir.z = 0;
-            transform.position = Vector2.MoveTowards(transform.position, posicion_siguiente.position, vel * Time.deltaTime);
-            //this.transform.position += dir * vel * Time.deltaTime;
-            if (Vector2.Distance(transform.position,posicion_siguiente.position)<distancia_punto)
+            Vector3 dir;
+            dir = posicion_siguiente - this.transform.position;
+            dir.z = 0;
+            this.transform.position += dir * vel * Time.deltaTime;
+            if (dir.magnitude <= distancia_punto)
             {
                 if (indice + 1 < ruta.transform.childCount)
                 {
                     indice++;
-                    posicion_actual = posicion_siguiente;
-                    posicion_siguiente = ruta.transform.GetChild(indice);
-                    
+                    posicion_siguiente = ruta.transform.GetChild(indice).position;
                 }
-                else
-                {
-                    indice = 0;
-                    transform.position = posicion_inicial;
-                    posicion_siguiente = ruta.transform.GetChild(0);
-                    posicion_actual = null;
-                }
-            }
-            else
-            {
-                posicion_muerte = this.transform.position;
-                this.transform.position = posicion_inicial;
             }
 
         }
         
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D otro)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (other.gameObject.tag == "Bala")
         {
@@ -87,6 +86,11 @@ public class UnidadG : MonoBehaviour {
         {
             Destroy(otro.gameObject);
 >>>>>>> parent of 44b4b08... 1
+=======
+        if (otro.gameObject.tag == "Bala")
+        {
+            Destroy(otro.gameObject);
+>>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
         }
     }
         public bool Esta_viva

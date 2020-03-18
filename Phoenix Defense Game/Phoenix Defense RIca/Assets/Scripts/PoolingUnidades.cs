@@ -8,6 +8,7 @@ public class PoolingUnidades : MonoBehaviour {
 	
 	void Start () {
 <<<<<<< HEAD
+<<<<<<< HEAD
         GameObject unidad1 = GameObject.FindGameObjectWithTag("Efuego");
         GameObject temp1;
         GameObject unidad2 = GameObject.FindGameObjectWithTag("Eagua");
@@ -24,17 +25,17 @@ public class PoolingUnidades : MonoBehaviour {
         Vector3 incremento = new Vector3(0, 1);
         Vector3 posicion_actual = unidad.transform.position;
 >>>>>>> parent of 44b4b08... 1
+=======
+        GameObject unidad = GameObject.FindGameObjectWithTag("Enemigos");
+        GameObject temp;
+        Vector3 incremento = new Vector3(0, 1);
+        Vector3 posicion_actual = unidad.transform.position;
+>>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
         for (int i = 0; i < 10; i++)
         {
-            temp1 = (GameObject)Instantiate(unidad1, posicion_actual1 + incremento, Quaternion.identity);
-          temp2 = (GameObject)Instantiate(unidad2, posicion_actual2 + incremento, Quaternion.identity);
-            temp3 = (GameObject)Instantiate(unidad3, posicion_actual3 + incremento, Quaternion.identity);
-            posicion_actual1 = temp1.transform.position;
-            unidades.Add(temp1);
-            posicion_actual2 = temp2.transform.position;
-            unidades.Add(temp2);
-            posicion_actual3 = temp3.transform.position;
-            unidades.Add(temp3);
+            temp = (GameObject)Instantiate(unidad, posicion_actual + incremento, Quaternion.identity);
+            posicion_actual = temp.transform.position;
+            unidades.Add(temp);  
         }
 	}
 	
