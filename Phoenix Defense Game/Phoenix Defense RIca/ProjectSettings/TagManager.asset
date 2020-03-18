@@ -6,9 +6,6 @@ TagManager:
   tags:
   - Enemigos
   - Bala
-  - Efuego
-  - Eagua
-  - Ehielo
   layers:
   - Default
   - TransparentFX

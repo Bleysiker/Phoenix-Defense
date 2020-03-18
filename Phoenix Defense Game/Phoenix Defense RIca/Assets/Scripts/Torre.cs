@@ -7,13 +7,12 @@ public class Torre : MonoBehaviour {
     private GameObject enemigo;
     private bool esta_viva; 
     private float distancia_umbral=2;
-    private Animator controlador;
 
    
 
     void Start()
     {
-        controlador = this.GetComponent<Animator>();
+
     }
 	
     void Disparar()
@@ -21,7 +20,6 @@ public class Torre : MonoBehaviour {
         GameObject obj = (GameObject)Instantiate(GameObject.Find("Bala"), this.transform.position, Quaternion.identity);
         Bala bala = obj.GetComponent<Bala>();
         bala.ActivarBala(this);
-
     }
 	GameObject BuscarEnemigoCercano()
     {
@@ -43,12 +41,7 @@ public class Torre : MonoBehaviour {
         if (enemigo != null)
         {
             Disparar();
-            controlador.SetBool("atacar", true);
             Debug.DrawLine(this.transform.position, enemigo.transform.position, Color.yellow);
-        }
-        else
-        {
-            controlador.SetBool("atacar", false);
         }
 	}
     public GameObject Enemigo
