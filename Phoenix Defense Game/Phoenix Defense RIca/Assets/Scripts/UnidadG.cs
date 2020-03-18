@@ -9,22 +9,31 @@ public class UnidadG : MonoBehaviour {
     private int indice;
     private Vector3 posicion_inicial;
     private Vector3 posicion_siguiente;
-    public float vel = 0.5f;
+    public float vel;
     private float tiempo;
-    private float distancia_punto = 0.6f;
+    private float distancia_punto;
     private bool esta_viva;
+    [SerializeField]
+    private int vidas;
+    private float delta_de_vida;
+    private LogicaBarra lb;
 
     
 
     void Start()
     {
+        vel = 0.2f;
+        delta_de_vida = 0.15f / vidas;
+        distancia_punto = 1f;
+        esta_viva = true;
         posicion_inicial = this.transform.position;
         posicion_siguiente = ruta.transform.GetChild(0).position;
+        lb = this.GetComponent<LogicaBarra>();
     }
     // Update is called once per frame
     void Update() {
 
-        if (esta_viva==false)
+        if (esta_viva==true)
         {
             Vector3 dir;
             dir = posicion_siguiente - this.transform.position;
@@ -44,10 +53,28 @@ public class UnidadG : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.gameObject.tag == "Bala")
+        Bala bala;
+        if (vidas > 0)
         {
-            Destroy(otro.gameObject);
+            if (otro.gameObject.tag == "Bala")
+            {
+                bala = otro.gameObject.GetComponent<Bala>();
+                bala.Disparada = false;
+                if (--vidas == 0)
+                {
+                    esta_viva = false;
+                    Debug.Log("Se murio la unidad");
+                    Destroy(this.gameObject);
+
+                }
+                else
+                {
+                    lb.ModificarBarra(delta_de_vida);                    
+                }
+                
+            }
         }
+        
     }
         public bool Esta_viva
     {
