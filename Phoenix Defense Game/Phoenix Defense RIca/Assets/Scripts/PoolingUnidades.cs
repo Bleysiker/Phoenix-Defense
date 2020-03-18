@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,10 +28,16 @@ public class PoolingUnidades : MonoBehaviour {
 =======
         GameObject unidad = GameObject.FindGameObjectWithTag("Enemigos");
         GameObject temp;
-        Vector3 incremento = new Vector3(0, 1);
+        Vector3 incremento = new Vector3(0, 2);
         Vector3 posicion_actual = unidad.transform.position;
+<<<<<<< HEAD
 >>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
         for (int i = 0; i < 10; i++)
+=======
+        unidades = new ArrayList();
+        unidades.Add(unidad);
+        for (int i = 0; i < 7; i++)
+>>>>>>> parent of 7728b27... Revert "1"
         {
             temp = (GameObject)Instantiate(unidad, posicion_actual + incremento, Quaternion.identity);
             posicion_actual = temp.transform.position;

@@ -20,8 +20,9 @@ public class UnidadG : MonoBehaviour {
 =======
     private Vector3 posicion_inicial;
     private Vector3 posicion_siguiente;
-    public float vel = 0.5f;
+    public float vel;
     private float tiempo;
+<<<<<<< HEAD
     private float distancia_punto = 0.6f;
 >>>>>>> parent of 44b4b08... 1
 =======
@@ -31,12 +32,20 @@ public class UnidadG : MonoBehaviour {
     private float tiempo;
     private float distancia_punto = 0.6f;
 >>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
+=======
+    private float distancia_punto;
+>>>>>>> parent of 7728b27... Revert "1"
     private bool esta_viva;
+    [SerializeField]
+    private int vidas;
+    private float delta_de_vida;
+    private LogicaBarra lb;
 
     
 
     void Start()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         esta_viva = true;
@@ -52,11 +61,20 @@ public class UnidadG : MonoBehaviour {
         posicion_inicial = this.transform.position;
         posicion_siguiente = ruta.transform.GetChild(0).position;
 >>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
+=======
+        vel = 0.2f;
+        delta_de_vida = 0.15f / vidas;
+        distancia_punto = 1f;
+        esta_viva = true;
+        posicion_inicial = this.transform.position;
+        posicion_siguiente = ruta.transform.GetChild(0).position;
+        lb = this.GetComponent<LogicaBarra>();
+>>>>>>> parent of 7728b27... Revert "1"
     }
     // Update is called once per frame
     void Update() {
 
-        if (esta_viva==false)
+        if (esta_viva==true)
         {
             Vector3 dir;
             dir = posicion_siguiente - this.transform.position;
@@ -78,6 +96,7 @@ public class UnidadG : MonoBehaviour {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (other.gameObject.tag == "Bala")
         {
             Destroy(other.gameObject);
@@ -91,7 +110,30 @@ public class UnidadG : MonoBehaviour {
         {
             Destroy(otro.gameObject);
 >>>>>>> parent of 9283ba6... animaciones de magos y movimiento de personaje
+=======
+        Bala bala;
+        if (vidas > 0)
+        {
+            if (otro.gameObject.tag == "Bala")
+            {
+                bala = otro.gameObject.GetComponent<Bala>();
+                bala.Disparada = false;
+                if (--vidas == 0)
+                {
+                    esta_viva = false;
+                    Debug.Log("Se murio la unidad");
+                    Destroy(this.gameObject);
+
+                }
+                else
+                {
+                    lb.ModificarBarra(delta_de_vida);                    
+                }
+                
+            }
+>>>>>>> parent of 7728b27... Revert "1"
         }
+        
     }
         public bool Esta_viva
     {
