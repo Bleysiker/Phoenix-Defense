@@ -7,6 +7,7 @@ public class PoolingUnidades : MonoBehaviour {
     public static ArrayList unidades = new ArrayList();
 	
 	void Start () {
+<<<<<<< HEAD
         GameObject unidad1 = GameObject.FindGameObjectWithTag("Efuego");
         GameObject temp1;
         GameObject unidad2 = GameObject.FindGameObjectWithTag("Eagua");
@@ -17,6 +18,12 @@ public class PoolingUnidades : MonoBehaviour {
         Vector3 posicion_actual1 = unidad1.transform.position;
         Vector3 posicion_actual2 = unidad2.transform.position;
         Vector3 posicion_actual3 = unidad3.transform.position;
+=======
+        GameObject unidad = GameObject.FindGameObjectWithTag("Enemigos");
+        GameObject temp;
+        Vector3 incremento = new Vector3(0, 1);
+        Vector3 posicion_actual = unidad.transform.position;
+>>>>>>> parent of 44b4b08... 1
         for (int i = 0; i < 10; i++)
         {
             temp1 = (GameObject)Instantiate(unidad1, posicion_actual1 + incremento, Quaternion.identity);

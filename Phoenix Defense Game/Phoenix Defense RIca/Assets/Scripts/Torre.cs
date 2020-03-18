@@ -7,13 +7,20 @@ public class Torre : MonoBehaviour {
     private GameObject enemigo;
     private bool esta_viva; 
     private float distancia_umbral=2;
+<<<<<<< HEAD
     private Animator controlador;
+=======
+>>>>>>> parent of 44b4b08... 1
 
    
 
     void Start()
     {
+<<<<<<< HEAD
         controlador = this.GetComponent<Animator>();
+=======
+
+>>>>>>> parent of 44b4b08... 1
     }
 	
     void Disparar()
@@ -43,6 +50,7 @@ public class Torre : MonoBehaviour {
         if (enemigo != null)
         {
             Disparar();
+<<<<<<< HEAD
             controlador.SetBool("atacar", true);
             Debug.DrawLine(this.transform.position, enemigo.transform.position, Color.yellow);
         }
@@ -50,6 +58,10 @@ public class Torre : MonoBehaviour {
         {
             controlador.SetBool("atacar", false);
         }
+=======
+            Debug.DrawLine(this.transform.position, enemigo.transform.position, Color.yellow);
+        }
+>>>>>>> parent of 44b4b08... 1
 	}
     public GameObject Enemigo
     {
