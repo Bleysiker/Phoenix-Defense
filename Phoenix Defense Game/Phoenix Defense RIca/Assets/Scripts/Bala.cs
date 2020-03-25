@@ -37,7 +37,6 @@ public class Bala : MonoBehaviour {
 	
 	
 	void Update () {
-
      
         if (objetivo != null)
         {
@@ -51,11 +50,11 @@ public class Bala : MonoBehaviour {
             }
 
         }
-        if (!Disparada)
+        if (!disparada)
         {
             ReciclarBala();
         }
-
+        
 	}
     private bool TiempoVida()
     {

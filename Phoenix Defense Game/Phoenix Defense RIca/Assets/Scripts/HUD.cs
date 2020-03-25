@@ -3,21 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HUD : MonoBehaviour {
+public class Hud : MonoBehaviour {
 
+    private static Hud instacia;
 
     [SerializeField]
     private Text monedas;
-    private static int contador_monedas;
+    private  int contador_monedas;
 
-    public static void ActualizarMoneda(int valor)
+    public int Contador_monedas
     {
-        contador_monedas += valor;
+        get
+        {
+            return contador_monedas;
+        }
+
+        set
+        {
+            contador_monedas = value;
+        }
     }
 
-	
-	void Update () {
-        monedas.text = contador_monedas.ToString();
+    private void Start()
+    {
+        instacia = this;
+        Contador_monedas = 1000;
+    }
+
+    public  void ActualizarMoneda(int valor)
+    {
+        Contador_monedas += valor;
+    }
+    public static Hud GetInstance()
+    {
+        return instacia;
+    }
+
+    void Update () {
+        monedas.text = Contador_monedas.ToString();
 		
 	}
 }
