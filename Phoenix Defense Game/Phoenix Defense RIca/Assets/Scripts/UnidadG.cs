@@ -29,12 +29,16 @@ public class UnidadG : MonoBehaviour {
     private LogicaBarra lb;
 
     private Hud inst;
-
+    private GameObject personaje;
+    //private PoolingUnidades cont;
     
 
     void Start()
     {
-        vel = 1;
+        //cont = new PoolingUnidades();
+        
+        
+        
         delta_de_vida = 0.15f / vidas;
         distancia_punto = 1f;
         esta_viva = true;
@@ -90,6 +94,9 @@ public class UnidadG : MonoBehaviour {
                     inst.ActualizarMoneda(valor_muerte);
                     Debug.Log("Se murio la unidad");
 
+                   // cont.Contarmuertes(1);
+                    
+                    
                     Destroy(this.gameObject);
 
                 }
