@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ActualizarTorre" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQACAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActualizarTorre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bala" Collapsed="true">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAKAAAAAADBAACAgAAgAAAgABACAECAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bala.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControlesTorre" Collapsed="true">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAAAAAAAAAAAAAAIAAAIAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\ControlesTorre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HudG" Collapsed="true">
+    <Position X="7" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAFAAKAAAAIAAiAAAAAABAAQAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\HudG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LogicaBarra" Collapsed="true">
+    <Position X="14" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAgAAAAAwAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LogicaBarra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LogicaPonerTorre" Collapsed="true">
+    <Position X="7" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAIAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LogicaPonerTorre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LogicaPonerTorre1" Collapsed="true">
+    <Position X="8.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LogicaPonerTorre1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoolingUnidades" Collapsed="true">
+    <Position X="10.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PoolingUnidades.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Torre" Collapsed="true">
+    <Position X="10.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAACAAQCAAEAgACAAAAIgAAAAMADAAAAAQAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Torre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Unidad" Collapsed="true">
+    <Position X="12.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABIAAACAAAAAABAAAAAAgAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Unidad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnidadG" Collapsed="true">
+    <Position X="14" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQABIgAACABEAAACCQAAAgsAEQAAAABAAQIAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UnidadG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.CircleObject" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.GameObjectExtensions" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.GPUInstancing" Collapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAEAEA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.GroupLayer" Collapsed="true">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\GroupLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.ImportBehaviour" Collapsed="true">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASCEBUICGAAKAAAAAAAEgQBEBEAAAQAAFiICAAAGEI=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\ImportBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.Layer" Collapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.Log" Collapsed="true">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\Log.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.Logger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\Log.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tiled2Unity.ObjectLayer" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\ObjectLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.PolygonObject" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\PolygonObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.PolylineObject" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\PolylineObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.RectangleObject" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\RectangleObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.SortingLayerExposed" Collapsed="true">
+    <Position X="12.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.SpriteDepthInMap" Collapsed="true">
+    <Position X="14" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CiQAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\SpriteDepthInMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.TileAnimator" Collapsed="true">
+    <Position X="7" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACACAAAAAAAACAAAIAAAAAAAAAAAAACAAEA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.TiledMap" Collapsed="true">
+    <Position X="8.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAASKAAhAABAAAACgACAAAAAAQhAACAwAAAEA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.TileLayer" Collapsed="true">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\TileLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.TileObject" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAQAgAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\TileObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiled2Unity.TmxObject" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAEAAAACAAABAAQQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
