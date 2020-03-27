@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LogicaPonerTorre1 : MonoBehaviour {
     [SerializeField]
-    public GameObject torre1;
-    private Hud hud;
+    private GameObject torre1;
+    private HudG hud;
     private Torre torre;
 
     void OnMouseDown()
@@ -17,17 +17,22 @@ public class LogicaPonerTorre1 : MonoBehaviour {
         temp = (GameObject)Instantiate(torre1,pos,Quaternion.identity);        
         temp.transform.position = pos;
         temp.layer = 5;
-        hud = Hud.GetInstance();
-        torre = temp.GetComponent<Torre>();
+        hud = HudG.GetInstance();        
+        torre = temp.GetComponentInChildren<Torre>();
+        
 
-        if (torre.Valor_actual < hud.Contador_monedas)
+        if (torre.Valor_actual1 < hud.Contador_monedas)
         {
-            torre.Esta_viva = true;
+            torre.Esta_viva = false;
             Destroy(this.gameObject);
+            hud.DescontarSaldo(torre.Valor_actual1);
+
         }
         else
         {
             Destroy(temp);
+            hud.ErrorSaldo();
         }
+
     }
 }

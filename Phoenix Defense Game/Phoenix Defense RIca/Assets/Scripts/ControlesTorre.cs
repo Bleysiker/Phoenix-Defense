@@ -9,22 +9,17 @@ public class ControlesTorre : MonoBehaviour {
     private GameObject btn_vender;
 
 	// Use this for initialization
+   
+	void Start () {
+        CambiarEstadoBotones(false);
+	}
     private void OnMouseDown()
     {
         CambiarEstadoBotones(true);
     }
-	void Start () {
-        CambiarEstadoBotones(false);
-	}
     public void CambiarEstadoBotones(bool estado)
     {
         btn_actualizar.SetActive(estado);
         btn_vender.SetActive(estado);
-    }
-   
-	
-	// Update is called once per frame
-	//void Update () {
-		
-	//}
+    } 
 }

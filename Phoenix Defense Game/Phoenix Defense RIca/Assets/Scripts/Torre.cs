@@ -12,9 +12,10 @@ public class Torre : MonoBehaviour {
     private Animator controlador;
     private int valor_actual;
 
-    public Torre()
+
+    public Torre()      
     {
-        Valor_actual = 150;
+        Valor_actual1 = 150;
     }
    
 
@@ -79,6 +80,7 @@ public class Torre : MonoBehaviour {
     {
         ArrayList enemigos = PoolingUnidades.unidades;
         GameObject temp;
+        
         foreach (object item in enemigos)
         {
 
@@ -119,7 +121,7 @@ public class Torre : MonoBehaviour {
         }
     }
 
-    public int Valor_actual
+    public int Valor_actual1
     {
         get
         {

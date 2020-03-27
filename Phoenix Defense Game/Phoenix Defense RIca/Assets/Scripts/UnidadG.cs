@@ -28,7 +28,7 @@ public class UnidadG : MonoBehaviour {
     private float delta_de_vida;
     private LogicaBarra lb;
 
-    private Hud inst;
+    private HudG hud;
     private GameObject personaje;
     //private PoolingUnidades cont;
     
@@ -44,7 +44,7 @@ public class UnidadG : MonoBehaviour {
         esta_viva = true;
         posicion_inicial = this.transform.position;
         posicion_siguiente = ruta.transform.GetChild(0);
-        inst = new Hud();
+        
         lb = this.GetComponent<LogicaBarra>();
     }
     // Update is called once per frame
@@ -91,13 +91,16 @@ public class UnidadG : MonoBehaviour {
                 if (--vidas == 0)
                 {
                     esta_viva = false;
-                    inst.ActualizarMoneda(valor_muerte);
+                   
                     Debug.Log("Se murio la unidad");
+                    // cont.Contarmuertes(1);
+                    hud = HudG.GetInstance();
 
-                   // cont.Contarmuertes(1);
-                    
-                    
-                    Destroy(this.gameObject);
+                    Destroy(this.gameObject);                   
+                   
+                    hud.ActualizaMonedas(valor_muerte);
+
+
 
                 }
                 else

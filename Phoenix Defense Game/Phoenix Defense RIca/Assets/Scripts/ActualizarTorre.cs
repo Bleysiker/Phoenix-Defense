@@ -5,21 +5,17 @@ using UnityEngine;
 public class ActualizarTorre : MonoBehaviour {
 
     private ControlesTorre ct;
-    public GameObject ki;
-    public Transform inicio_t;
+    public Animator estados;  
 
-   
-
-    // Use this for initialization
     void Start () {
         ct = this.GetComponentInParent<ControlesTorre>();
-        
-	}
-	
+        estados = this.GetComponentInParent<Animator>();    
+	}	
     private void OnMouseDown()
     {
+        estados.SetInteger("Nivel", 1);
         ct.CambiarEstadoBotones(false);
-        Instantiate(ki, this.inicio_t.position,Quaternion.identity);
+       
     }
 	// Update is called once per frame
 	void Update () {
