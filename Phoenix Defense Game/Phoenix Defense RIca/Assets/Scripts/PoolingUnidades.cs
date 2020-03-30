@@ -50,7 +50,7 @@ public class PoolingUnidades : MonoBehaviour {
         unidades.Add(unidad4);
         unidades.Add(unidad5);
         unidades.Add(unidad6);
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 9; i++)
         {
             temp1 = (GameObject)Instantiate(unidad1, posicion_actual1 + incremento, Quaternion.identity);
             posicion_actual1 = temp1.transform.position;
