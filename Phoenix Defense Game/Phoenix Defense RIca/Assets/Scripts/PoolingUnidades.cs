@@ -62,6 +62,7 @@ public class PoolingUnidades : MonoBehaviour {
             posicion_actual3 = temp3.transform.position;
             unidades.Add(temp3);
         }
+
 	}
 	
 	
