@@ -5,7 +5,16 @@ using UnityEngine;
 public class ActualizarTorre : MonoBehaviour {
 
     private ControlesTorre ct;
-    public Animator estados;  
+    public Animator estados;
+    private int valormejora;
+    private HudG hud;
+
+
+    public ActualizarTorre()
+    {
+        valormejora=50;
+
+    }
 
     void Start () {
         ct = this.GetComponentInParent<ControlesTorre>();
@@ -13,13 +22,27 @@ public class ActualizarTorre : MonoBehaviour {
 	}	
     private void OnMouseDown()
     {
+        hud = HudG.GetInstance();
         estados.SetInteger("Nivel", 1);
         ct.CambiarEstadoBotones(false);
+        hud.DescontarSaldo(valormejora);
        
     }
 	// Update is called once per frame
 	void Update () {
 		
 	}
+    public int Valormejora
+    {
+        get
+        {
+            return valormejora;
+        }
+
+        set
+        {
+            valormejora = value;
+        }
+    }
 
 }
