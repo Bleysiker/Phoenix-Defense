@@ -16,7 +16,7 @@ public class UnidadG : MonoBehaviour, IControlable {
     [SerializeField]
     private int valor_muerte;
     private int indice;
-
+    public GameObject efecto_postmorten;
     private Vector2 posicion_inicial;
     private Transform posicion_siguiente;
     private Transform posicion_actual;
@@ -37,10 +37,7 @@ public class UnidadG : MonoBehaviour, IControlable {
 
     void Start()
     {
-        //cont = new PoolingUnidades();
-        
-        
-        
+        //cont = new PoolingUnidades(); 
         delta_de_vida = 0.15f / vidas;
         distancia_punto = 1f;
         esta_viva = true;
@@ -51,6 +48,8 @@ public class UnidadG : MonoBehaviour, IControlable {
         hud = HudG.GetInstance();
     }
     // Update is called once per frame
+
+
     void Update() {
         if (EsActualizable())
         {
@@ -79,7 +78,6 @@ public class UnidadG : MonoBehaviour, IControlable {
                         posicion_actual = null;
                     }
                 }
-
             }
             else
             {
@@ -107,12 +105,10 @@ public class UnidadG : MonoBehaviour, IControlable {
                     // cont.Contarmuertes(1);
                     hud = HudG.GetInstance();
                     hud.Descontarvidas();
+                    Instantiate(efecto_postmorten, this.transform.position, Quaternion.identity);
                     Destroy(this.gameObject);                   
                    
                     hud.ActualizaMonedas(valor_muerte);
-
-
-
                 }
                 else
                 {

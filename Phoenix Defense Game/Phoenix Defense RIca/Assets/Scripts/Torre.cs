@@ -11,7 +11,7 @@ public class Torre : MonoBehaviour {
     private GameObject[] balas;
     private Animator controlador;
     private int valor_actual;
-
+    private AudioSource disparo;
 
     public Torre()      
     {
@@ -25,7 +25,7 @@ public class Torre : MonoBehaviour {
         tiempo_disparo = .8f;
         crearBalas(5);
         controlador = this.GetComponent<Animator>();
-
+        disparo = this.GetComponent<AudioSource>();
     }
    
 	
@@ -73,6 +73,7 @@ public class Torre : MonoBehaviour {
     {
 
         Bala bala = DespacharBalaLibre();
+        disparo.Play();
         bala.ActivarBala(this);
        
     }

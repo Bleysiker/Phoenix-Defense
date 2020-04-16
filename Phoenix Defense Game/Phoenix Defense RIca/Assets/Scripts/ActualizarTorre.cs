@@ -8,7 +8,7 @@ public class ActualizarTorre : MonoBehaviour {
     public Animator estados;
     private int valormejora;
     private HudG hud;
-
+    public GameObject mejora;
 
     public ActualizarTorre()
     {
@@ -18,13 +18,17 @@ public class ActualizarTorre : MonoBehaviour {
 
     void Start () {
         ct = this.GetComponentInParent<ControlesTorre>();
-        estados = this.GetComponentInParent<Animator>();    
+        estados = this.GetComponentInParent<Animator>();
+        
 	}	
     private void OnMouseDown()
     {
+        
         hud = HudG.GetInstance();
         estados.SetInteger("Nivel", 1);
+        Instantiate(mejora, this.transform.position, Quaternion.identity);
         ct.CambiarEstadoBotones(false);
+        
         hud.DescontarSaldo(valormejora);
        
     }

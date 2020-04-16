@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ControlEjecucion : MonoBehaviour,IPointerClickHandler {
     private bool habilitado;
-     
+    private AudioSource batalla;
     public void OnPointerClick(PointerEventData eventData)
     {
         HudG hud;
@@ -14,6 +14,7 @@ public class ControlEjecucion : MonoBehaviour,IPointerClickHandler {
         if (habilitado)
         {
             hud.Modo_ejecucion = HudG.EJECUCION;
+            batalla.Play();
             //Debug.Log("click");
             habilitado = false;
         }
@@ -21,7 +22,7 @@ public class ControlEjecucion : MonoBehaviour,IPointerClickHandler {
 
     // Use this for initialization
     void Start () {
-        
+        batalla = this.GetComponent<AudioSource>();
         habilitado = true;
 	}
 	

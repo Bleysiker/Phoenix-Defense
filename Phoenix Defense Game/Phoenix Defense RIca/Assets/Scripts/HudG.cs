@@ -13,7 +13,8 @@ public class HudG : MonoBehaviour {
     private int contador_monedas;
     private int contador_vidas;
     private uint modo_ejecucion;
-
+   
+    private AudioSource sonido;
     public const uint CONSTRUCCION=1;
     public const uint EJECUCION = 2;
 
@@ -46,6 +47,7 @@ public class HudG : MonoBehaviour {
 
     private void Start()
     {
+        sonido = this.GetComponent<AudioSource>();
         modo_ejecucion = CONSTRUCCION;
         contador_monedas = 1000;
         contador_vidas = 30;
@@ -54,6 +56,7 @@ public class HudG : MonoBehaviour {
     public void ActualizaMonedas(int total)
     {
         Contador_monedas += total;
+        sonido.Play();
     }
 
     public static HudG GetInstance()
@@ -81,15 +84,18 @@ public class HudG : MonoBehaviour {
     {
         contador_monedas -= valor;
         StartCoroutine("CambiarColor", Color.black);
+        sonido.Play();
     }
     public void ErrorSaldo()
     {
         StartCoroutine("CambiarColor", Color.red);
+        
     }
     public IEnumerator CambiarColor(Color color)
     {
         monedas.color = color;
         yield return new WaitForSeconds(.5f);
+        
         ResetearColorSaldo();
     }
     public void ResetearColorSaldo()

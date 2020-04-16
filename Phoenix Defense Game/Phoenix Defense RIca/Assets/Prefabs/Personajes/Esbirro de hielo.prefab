@@ -368,8 +368,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ruta: {fileID: 0}
   vel: 0.6
-  vidas: 6
+  vidas: 7
   valor_muerte: 5
+  efecto_postmorten: {fileID: 1017851724328202, guid: bee4ba83ac5fd624ebeb3526b2b23eb5,
+    type: 2}
   posicion_muerte: {x: 0, y: 0, z: 0}
 --- !u!114 &114788307018389812
 MonoBehaviour:

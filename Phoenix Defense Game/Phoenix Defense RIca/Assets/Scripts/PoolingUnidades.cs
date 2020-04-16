@@ -25,8 +25,6 @@ public class PoolingUnidades : MonoBehaviour {
     }*/
 
     void Start () {
-        //Contesbirros = 0;
-        
         GameObject unidad1 = GameObject.FindGameObjectWithTag("Eagua");
         GameObject temp1;
         GameObject unidad2 = GameObject.FindGameObjectWithTag("Efuego");
@@ -62,7 +60,6 @@ public class PoolingUnidades : MonoBehaviour {
             posicion_actual3 = temp3.transform.position;
             unidades.Add(temp3);
         }
-
 	}
 	
 	

@@ -323,6 +323,8 @@ MonoBehaviour:
   vel: 0.6
   vidas: 6
   valor_muerte: 5
+  efecto_postmorten: {fileID: 1017851724328202, guid: bee4ba83ac5fd624ebeb3526b2b23eb5,
+    type: 2}
   posicion_muerte: {x: 0, y: 0, z: 0}
 --- !u!212 &212286396230648392
 SpriteRenderer:

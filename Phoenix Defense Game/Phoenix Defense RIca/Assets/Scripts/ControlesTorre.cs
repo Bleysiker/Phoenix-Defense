@@ -7,11 +7,13 @@ public class ControlesTorre : MonoBehaviour {
     private GameObject btn_actualizar;
     [SerializeField]
     private GameObject btn_vender;
-
+  
 	// Use this for initialization
    
 	void Start () {
         CambiarEstadoBotones(false);
+       
+     
 	}
     private void OnMouseDown()
     {
@@ -21,5 +23,6 @@ public class ControlesTorre : MonoBehaviour {
     {
         btn_actualizar.SetActive(estado);
         btn_vender.SetActive(estado);
+    
     } 
 }
