@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UnidadG : MonoBehaviour, IControlable {
+public class UnidadG : MonoBehaviour, IControlable
+{
 
     // Use this for initialization
     [SerializeField]
@@ -20,20 +21,20 @@ public class UnidadG : MonoBehaviour, IControlable {
     private Vector2 posicion_inicial;
     private Transform posicion_siguiente;
     private Transform posicion_actual;
-   
+
     private float tiempo;
     private float distancia_punto;
     private bool esta_viva;
     [SerializeField]
     private Vector3 posicion_muerte;
-    
+
     private float delta_de_vida;
     private LogicaBarra lb;
 
     private HudG hud;
     private GameObject personaje;
     //private PoolingUnidades cont;
-   
+
 
     void Start()
     {
@@ -43,14 +44,15 @@ public class UnidadG : MonoBehaviour, IControlable {
         esta_viva = true;
         posicion_inicial = this.transform.position;
         posicion_siguiente = ruta.transform.GetChild(0);
-        
+
         lb = this.GetComponent<LogicaBarra>();
         hud = HudG.GetInstance();
     }
     // Update is called once per frame
 
 
-    void Update() {
+    void Update()
+    {
         if (EsActualizable())
         {
             if (esta_viva == true)
@@ -76,6 +78,8 @@ public class UnidadG : MonoBehaviour, IControlable {
                         transform.position = posicion_inicial;
                         posicion_siguiente = ruta.transform.GetChild(0);
                         posicion_actual = null;
+                        hud.Descontarvidas();
+
                     }
                 }
             }
@@ -100,24 +104,23 @@ public class UnidadG : MonoBehaviour, IControlable {
                 if (--vidas == 0)
                 {
                     esta_viva = false;
-                   
+
                     Debug.Log("Se murio la unidad");
                     // cont.Contarmuertes(1);
                     hud = HudG.GetInstance();
-                    hud.Descontarvidas();
                     Instantiate(efecto_postmorten, this.transform.position, Quaternion.identity);
-                    Destroy(this.gameObject);                   
-                   
+                    Destroy(this.gameObject);
+
                     hud.ActualizaMonedas(valor_muerte);
                 }
                 else
                 {
-                    lb.ModificarBarra(delta_de_vida);                    
+                    lb.ModificarBarra(delta_de_vida);
                 }
-                
+
             }
         }
-        
+
     }
 
     public bool EsActualizable()
@@ -150,6 +153,8 @@ public class UnidadG : MonoBehaviour, IControlable {
             posicion_muerte = value;
         }
     }
+
 }
+    
 
 

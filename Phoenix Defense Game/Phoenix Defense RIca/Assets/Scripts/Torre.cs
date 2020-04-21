@@ -15,15 +15,15 @@ public class Torre : MonoBehaviour {
 
     public Torre()      
     {
-        Valor_actual1 = 150;
+        Valor_actual1 = 80;
     }
    
 
     void Start()
     {
-        distancia_umbral = 1.4f;
-        tiempo_disparo = .8f;
-        crearBalas(5);
+        distancia_umbral= 1.7f;
+        tiempo_disparo = .7f;
+        crearBalas(8);
         controlador = this.GetComponent<Animator>();
         disparo = this.GetComponent<AudioSource>();
     }
