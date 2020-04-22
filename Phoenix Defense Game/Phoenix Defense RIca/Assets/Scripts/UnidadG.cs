@@ -46,13 +46,14 @@ public class UnidadG : MonoBehaviour, IControlable
         posicion_siguiente = ruta.transform.GetChild(0);
 
         lb = this.GetComponent<LogicaBarra>();
-        hud = HudG.GetInstance();
+        
     }
     // Update is called once per frame
 
 
     void Update()
     {
+        hud = HudG.GetInstance();
         if (EsActualizable())
         {
             if (esta_viva == true)
@@ -106,6 +107,7 @@ public class UnidadG : MonoBehaviour, IControlable
                     esta_viva = false;
 
                     Debug.Log("Se murio la unidad");
+                    hud.Contarmuertes();
                     // cont.Contarmuertes(1);
                     hud = HudG.GetInstance();
                     Instantiate(efecto_postmorten, this.transform.position, Quaternion.identity);

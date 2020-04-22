@@ -12,8 +12,11 @@ public class HudG : MonoBehaviour {
     private Text vidas;
     [SerializeField]
     private Canvas muerte;
+    [SerializeField]
+    private Canvas victoria;
     private int contador_monedas;
     private int contador_vidas;
+    private int contador_muertes;
     private uint modo_ejecucion;
    
     private AudioSource sonido;
@@ -49,12 +52,14 @@ public class HudG : MonoBehaviour {
 
     private void Start()
     {
+        contador_muertes = 0;
         sonido = this.GetComponent<AudioSource>();
         modo_ejecucion = CONSTRUCCION;
         contador_monedas = 300;
         contador_vidas = 25;
         instancia = this;
         muerte.enabled = false;
+        victoria.enabled = false;
     }
     public void ActualizaMonedas(int total)
     {
@@ -82,6 +87,19 @@ public class HudG : MonoBehaviour {
         {
             muerte.enabled = true;
             Time.timeScale = 0;
+        }
+    }
+    public void Contarmuertes()
+    {
+        if (contador_muertes+1< 36)
+        {
+            contador_muertes++;
+        }
+        else
+        {
+            victoria.enabled = true;
+            Time.timeScale = 0;
+            
         }
     }
     public void DescontarSaldo(int valor)
