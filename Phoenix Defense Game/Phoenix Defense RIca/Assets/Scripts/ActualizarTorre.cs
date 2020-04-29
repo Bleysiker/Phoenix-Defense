@@ -13,7 +13,7 @@ public class ActualizarTorre : MonoBehaviour {
 
     public ActualizarTorre()
     {
-        valormejora=50;
+        valormejora=130;
 
 
 
