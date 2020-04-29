@@ -1713,6 +1713,11 @@ Prefab:
       propertyPath: ruta
       value: 
       objectReference: {fileID: 1694448952}
+    - target: {fileID: 114355484560683998, guid: 1b472248954cbff4a970f7b1819d45d1,
+        type: 2}
+      propertyPath: vidas
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b472248954cbff4a970f7b1819d45d1, type: 2}
   m_IsPrefabParent: 0
@@ -2757,6 +2762,11 @@ Prefab:
       propertyPath: ruta
       value: 
       objectReference: {fileID: 878254263}
+    - target: {fileID: 114084323135437854, guid: 9f8a757ca5820744496f9dd0f9929e55,
+        type: 2}
+      propertyPath: vidas
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f8a757ca5820744496f9dd0f9929e55, type: 2}
   m_IsPrefabParent: 0
@@ -3618,6 +3628,11 @@ Prefab:
       propertyPath: ruta
       value: 
       objectReference: {fileID: 1257051158}
+    - target: {fileID: 114806269818960504, guid: 13d4e233aec665244931e20f5a979305,
+        type: 2}
+      propertyPath: vidas
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13d4e233aec665244931e20f5a979305, type: 2}
   m_IsPrefabParent: 0

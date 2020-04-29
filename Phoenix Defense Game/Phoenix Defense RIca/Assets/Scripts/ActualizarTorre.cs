@@ -13,9 +13,7 @@ public class ActualizarTorre : MonoBehaviour {
 
     public ActualizarTorre()
     {
-        valormejora=130;
-
-
+        Valormejora = 150;
 
     }
 
@@ -27,14 +25,20 @@ public class ActualizarTorre : MonoBehaviour {
     }
     private void OnMouseDown()
     {
-
         hud = HudG.GetInstance();
-        estados.SetInteger("Nivel", 1);
-        Instantiate(mejora, this.transform.position, Quaternion.identity);
-        ct.CambiarEstadoBotones(false);
-        child.SetActive(true);
-        hud.DescontarSaldo(valormejora);
 
+        if (Valormejora < hud.Contador_monedas)
+        {
+            estados.SetInteger("Nivel", 1);
+            Instantiate(mejora, this.transform.position, Quaternion.identity);
+            ct.CambiarEstadoBotones(false);
+            child.SetActive(true);
+            hud.DescontarSaldo(Valormejora);
+        }
+        else 
+        {
+            hud.ErrorSaldo();
+        }
 
     }
     // Update is called once per frame
